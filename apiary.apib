@@ -1,0 +1,49 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# RR_UserDetails
+
+UserDetails API allows you to create and get user details.
+
+## Get Collection [/getUserName]
+
+### Get User Details [GET]
+
+Get first and last name of user based on user-id.
+
++ Request
+
+        {
+            "userid": 1
+        }
+
++ Response 200 (application/json)
+
+        [
+            {
+                "firstName":"Mark", 
+                "lastName":"Welp"
+            }
+        ]
+
+## Post Collection [/CreateUser]
+
+### Create a User [POST]
+
+Create a user by passing user-id, first and last name.
+
++ Request (application/json)
+
+        {
+            "userid":2, 
+            "firstName":"mark", 
+            "lastName":"welp" 
+        }
+
++ Response 200 (application/json)
+
+        [
+            {
+                "status":"Record Created"
+            }
+        ]
