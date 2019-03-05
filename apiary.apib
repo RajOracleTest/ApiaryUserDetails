@@ -1,49 +1,31 @@
 FORMAT: 1A
-HOST: http://129.213.41.217:8011/UserDetail
+HOST: http://polls.apiblueprint.org/
 
-# RR_UserDetails
+# GetEmployeeDetails
 
-UserDetails API allows you to create and get user details.
+This API fetches employee details from database
 
-## Get Collection [/getUserName]
+## Questions Collection [/questions]
 
-### Get User Details [GET]
-
-Get first and last name of user based on user-id.
-
-+ Request
-
-        {
-            "userid": 1
-        }
+### List All Questions [GET]
 
 + Response 200 (application/json)
 
         [
+
             {
-                "firstName":"Mark", 
-                "lastName":"Welp"
-            }
-        ]
-
-## Post Collection [/CreateUser]
-
-### Create a User [POST]
-
-Create a user by passing user-id, first and last name.
-
-+ Request (application/json)
-
-        {
-            "userid":2, 
-            "firstName":"mark", 
-            "lastName":"welp" 
-        }
-
-+ Response 200 (application/json)
-
-        [
-            {
-                "status":"Record Created"
+                "DOT_EMPLOYEE": [
+                    {
+                        "EMPNO" : "1234",
+                        "ENAME" : "RAJ",
+                        "JOB" : "MANAGER",
+                        "DEPTNO" : "20"
+                    }, {
+                        "EMPNO" : "45",
+                        "ENAME" : "SAM",
+                        "JOB" : "CLERK",
+                        "DEPTNO" : "20"
+                    }
+                ]
             }
         ]
